@@ -80,7 +80,7 @@ a:hover {
     background: top no-repeat;
 }
 
-.bloc-bg-texture::before {
+/* .bloc-bg-texture::before {
     content: "";
     background-size: 2px 2px;
     position: absolute;
@@ -88,10 +88,10 @@ a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-}
+} */
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    /* background: url("img/texture-paper.png"); */
     background-size: 280px 280px;
 }
 
@@ -100,7 +100,7 @@ a:hover {
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+    color: #383838;
 }
 
 .d-bloc button:hover {
@@ -133,7 +133,7 @@ a:hover {
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: #383838;
 }
 
 .d-bloc .a-btn:hover,
@@ -302,6 +302,7 @@ a:hover {
 }
 
 .navbar-brand img {
+    height: 40px;
     max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
@@ -508,6 +509,7 @@ button {
 .form-control {
     border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
+    border: 1px solid #1c1836;
 }
 
 .scrollToTop {
@@ -651,7 +653,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: black!important;
 }
 
 .container {
@@ -677,7 +679,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 1.2em;
 }
 
 .tight-width-whitespace {
@@ -705,14 +707,16 @@ p {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 23px;
     line-height: 1.4em;
+    color: #333333!important;
 }
 
 h3 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
+    text-align: center;
     color: #333333!important;
 }
 
@@ -723,7 +727,7 @@ h3 {
 }
 
 h1 {
-    color: #333333!important;
+    color: #FFFFFF!important;
 }
 
 h4 {
@@ -736,7 +740,7 @@ h4 {
 }
 
 .white {
-    color: #FFFFFF!important;
+    color: #333333!important; 
 }
 
 .portfolio-thumb {
@@ -753,12 +757,14 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    /* background-color: rgba(165, 147, 99, 0.7); */
+    background-color: #F3976C;
     padding: 40px 40px 40px 40px;
 }
 
 .bold-link {
     font-weight: 900;
+    font-size: 1.1em;
     text-decoration: underline!important;
 }
 
@@ -766,20 +772,23 @@ h4 {
     background-color: #FFFFFF;
 }
 
-.bgc-dark-slate-blue {
+/* .bgc-dark-slate-blue {
     background-color: #364577;
-}
+} */
 
 .bgc-atomic-tangerine {
     background-color: #F3976C;
 }
 
 .tc-white {
-    color: #F3976C!important;
-}
+    color: white!important;
+    background-color: #364577;
+    border-radius: 5px 35px;
+    PADDING: 1em;
+} 
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #1c1836;
     color: #FFFFFF!important;
 }
 
@@ -789,8 +798,8 @@ h4 {
 }
 
 .ltc-white {
-    color: #FFFFFF!important;
-}
+    color: #1c1836!important;
+} 
 
 .ltc-white:hover {
     color: #cccccc!important;
@@ -809,13 +818,13 @@ h4 {
     border-color: #364577!important;
 }
 
-.bg-dots-bg {
+/* .bg-dots-bg {
     background-image: url("img/dots-bg.png");
-}
+} */
 
-.bg-lines-h2-bg {
+/* .bg-lines-h2-bg {
     background-image: url("img/lines-h2-bg.png");
-}
+} */
 
 .bg-banniere {
     background-image: url("img/la-chouette-agence-banniere.jpg");
@@ -848,13 +857,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -873,8 +882,7 @@ h4 {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding: 0;
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -884,8 +892,6 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
